@@ -23,10 +23,10 @@ bn.cpt("Cloudy").fillWith([1 - prob_cloudy, prob_cloudy])
 
 # 3. Inference & Visualization
 st.subheader("Network Structure")
-fig, ax = plt.subplots()
+fig = plt.figure() # Create a clean figure object; #fig, ax = plt.subplots()
 # We use the standard matplotlib export for Streamlit
-gnb.showBN(bn, matplotlib=True) 
-st.pyplot(plt.gcf())
+gnb.showBN(bn)     # Let pyAgrum draw onto that figure; # gnb.showBN(bn, matplotlib=True) 
+st.pyplot(fig)     # Hand the figure to Streamlit; # st.pyplot(plt.gcf())
 
 st.subheader("Inference Results")
 ie = gum.LazyPropagation(bn)
