@@ -2,3 +2,5 @@ pyagrum
 streamlit
 matplotlib
 matplotlib-inline
+ipython
+pydotplus
