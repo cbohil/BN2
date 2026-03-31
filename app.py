@@ -4,6 +4,7 @@ matplotlib.use('Agg') # Forces a static backend suitable for web servers
 import streamlit as st
 import pyagrum as gum
 import pyagrum.lib.notebook as gnb
+import pyagrum.lib.image as gumimage
 import matplotlib.pyplot as plt
 
 st.title("Interactive Bayesian Network")
@@ -30,6 +31,9 @@ bn.cpt("Cloudy").fillWith([1 - prob_cloudy, prob_cloudy])
 st.subheader("Network Structure")
 # Export the BN to a temporary image file or a numpy array
 # If filename=None, it returns a numpy array that st.image can read
+# img = gumimage.export(bn) 
+# st.image(img)
+# filename=None returns a numpy array that Streamlit can display directly
 img = gumimage.export(bn) 
 st.image(img)
 
