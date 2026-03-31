@@ -7,6 +7,8 @@ import pyagrum.lib.notebook as gnb
 import pyagrum.lib.image as gumimage
 import matplotlib.pyplot as plt
 
+st.set_page_config(initial_sidebar_state="expanded")
+
 st.title("Interactive Bayesian Network")
 
 # 1. Setup Model
