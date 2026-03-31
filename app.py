@@ -1,3 +1,6 @@
+import matplotlib
+matplotlib.use('Agg') # Forces a static backend suitable for web servers
+
 import streamlit as st
 import pyagrum as gum
 import pyagrum.lib.notebook as gnb
