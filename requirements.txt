@@ -1,3 +1,4 @@
 pyagrum
 streamlit
 matplotlib
+matplotlib-inline
